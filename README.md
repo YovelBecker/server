@@ -1,4 +1,4 @@
-# Express Node.js server Boilerplate
+# Node.js Express server Boilerplate
 
 Using this repository you can create a basic Node.js server for your own use.
 

@@ -1,12 +1,12 @@
 pipeline {
-  
-  agent { dockerfile true }
-    
-  stages {
-    stage('deploy') {
-      steps {
-        sh "docker-compose up --build"
-      }
+    agent {
+        docker { image 'node:14-alpine' }
     }
-  }
+    stages {
+        stage('Test') {
+            steps {
+                sh 'node --version'
+            }
+        }
+    }
 }

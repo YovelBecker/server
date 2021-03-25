@@ -1,18 +1,11 @@
 pipeline {
-  agent any
-
-  tools {docker "Docker"}
+  
+  agent { dockerfile true }
     
   stages {
-     
-    stage('Build') {
+    stage('deploy') {
       steps {
-        sh 'npm i --silent'
-      }
-    }
-    stage('Start') {
-      steps {
-        sh 'docker-compose up --build'
+        sh "docker-compose up --build -d"
       }
     }
   }

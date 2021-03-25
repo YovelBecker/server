@@ -1,3 +1,1 @@
-npm install
-
-node server.js
+docker-compose up --build -d

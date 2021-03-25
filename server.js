@@ -9,7 +9,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 const port = 3000
-
+console.log('Hello There Jenkins');
 app.get('/', (req, res) => {
     res.send('Hello from Express!')
 })
